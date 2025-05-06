@@ -46,8 +46,6 @@
    >
    > - You have an NVIDIA GPU with proper drivers  
    > - CUDA 12.6 is installed  
-   > - You manually install the appropriate version of PyTorch with GPU support from [https://pytorch.org/get-started/locally/](https://pytorch.org/get-started/locally/)
-   > - 💡 Alternatively, if you don't need GPU acceleration, you can simply install the latest CPU-only version of PyTorch — no need to install CUDA.
 ---
 
 ## 🧪 Quick Start
