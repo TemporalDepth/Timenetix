@@ -36,38 +36,32 @@
    ```
 
 3. ## ⚙️ Installation and System Requirements
-
-🧠 All required libraries, including [Darts](https://github.com/unit8co/darts) and its dependencies, will be installed automatically on first run.
-
----
-
-### ⚡ Using with GPU (Recommended)
-
-If you plan to use PyTorch-based models (such as `RNN`, `N-BEATS`, `TFT`) and have an NVIDIA GPU:
-
-1. Install the latest drivers for your NVIDIA GPU
-2. Install CUDA:
-   - **Recommended version:** 12.6
-   - **Supported (but not recommended):** 12.8
-3. Install PyTorch with CUDA support
-   👉 Installation guide: [https://pytorch.org/get-started/locally/](https://pytorch.org/get-started/locally/)
-
----
-
-### 🖥 Using without GPU (CPU Only)
-
-If you don’t have a dedicated GPU:
-
-- Install PyTorch with **CPU-only support**
-- All models will still work, but training and forecasting may be significantly slower
-
----
-
-💡 Example command to install PyTorch with CPU support:
-
-```bash
-pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
-
+   
+   🧠 All required libraries, including [Darts](https://github.com/unit8co/darts) and its dependencies, will be installed automatically on first run.
+   
+   ---
+   
+   ### ⚡ Using with GPU (Recommended)
+   
+   If you plan to use PyTorch-based models (such as `RNN`, `N-BEATS`, `TFT`) and have an NVIDIA GPU:
+   
+   1. Install the latest drivers for your NVIDIA GPU
+   2. Install CUDA:
+      - **Recommended version:** 12.6
+      - **Supported (but not recommended):** 12.8
+   3. Install PyTorch with CUDA support
+      👉 Installation guide: [https://pytorch.org/get-started/locally/](https://pytorch.org/get-started/locally/)
+   
+   ---
+   
+   ### 🖥 Using without GPU (CPU Only)
+   
+   If you don’t have a dedicated GPU:
+   
+   - Install PyTorch with **CPU-only support**
+   - All models will still work, but training and forecasting may be significantly slower
+   
+   ---
 
 ## 🧪 Quick Start
 
