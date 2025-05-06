@@ -14,7 +14,7 @@
 ## 📋 Prerequisites
 
 - Linux-based operating system (recommended)  
-- Python 3.8 or higher  
+- Python 3.9 or higher  
 - Git  
 - Installation on Windows may be possible, but it has not been tested
 ---
