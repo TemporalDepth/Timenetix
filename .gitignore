@@ -1,0 +1,18 @@
+venv/
+
+*.csv
+*.xlsx
+*.ipynb
+__pycache__/
+*.pyc
+*.pyo
+*.pud
+
+# Gradio flagged examples
+.gradio/flagged/
+# Darts logs
+darts_logs/
+.vscode/
+.idea/
+
+!sample_data/*.csv

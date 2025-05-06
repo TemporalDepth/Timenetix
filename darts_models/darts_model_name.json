@@ -1,0 +1,38 @@
+{
+    "Baseline Models": [
+      "NaiveMean",
+      "NaiveSeasonal",
+      "NaiveDrift",
+      "NaiveMovingAverage"
+    ],
+    "Statistical Models": [
+      "ARIMA",
+      "AutoARIMA",
+      "ExponentialSmoothing",
+      "TBATS",
+      "Theta",
+      "Prophet"
+     
+    ],
+    "Regression Models": [
+      "RegressionModel",
+      "LinearRegressionModel",
+      "RandomForest",
+      "LightGBMModel",
+      "XGBModel",
+      "CatBoostModel"
+    ],
+    "PyTorch (Lightning)-based Models": [
+      "RNNModel",
+      "BlockRNNModel",
+      "NBEATSModel",
+      "NHiTSModel",
+      "TCNModel",
+      "TransformerModel",
+      "DLinearModel",
+      "NLinearModel",
+      "TiDEModel",
+      "TSMixerModel"
+    ]
+  }
+  
