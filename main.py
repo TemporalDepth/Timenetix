@@ -118,7 +118,7 @@ with gr.Blocks() as demo:
                     )
 
 
-            save_forecast_button = gr.Button("Download", variant="primary", elem_id="download_button")
+            save_forecast_button = gr.Button("Save", variant="primary", elem_id="save_button")
             save_forecast_button.click(
                                     fn = save_file,
                                     inputs = [save_file_name,select_extension_to_save,forecast_table_output],
