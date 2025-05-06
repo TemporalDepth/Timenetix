@@ -1,5 +1,5 @@
 gradio
 pandas
 plotly
-u8darts[all]
+u8darts[notorch]
 openpyxl

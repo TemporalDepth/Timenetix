@@ -1,21 +1,21 @@
-# ⏳ Timenetix: 
+# ⏳ Timenetix:
 
-**Timenetix** is a user-friendly tool for time series forecasting built on top of the [Darts](https://github.com/unit8co/darts) library. 
+**Timenetix** is a user-friendly tool for time series forecasting built on top of the [Darts](https://github.com/unit8co/darts) library.
 
 ---
 
 ## ✅ Features
 
-- ⚡ Easy-to-use CLI and Python interface  
-- 🧠 Access to cutting-edge models (ARIMA, Prophet, RNNs, N-BEATS, TFT, etc.)  
-- 📈 Visualization of forecasts and historical data  
+- ⚡ Easy-to-use CLI and Python interface
+- 🧠 Access to cutting-edge models (ARIMA, Prophet, RNNs, N-BEATS, TFT, etc.)
+- 📈 Visualization of forecasts and historical data
 ---
 
 ## 📋 Prerequisites
 
-- Linux-based operating system (recommended)  
-- Python 3.9 or higher  
-- Git  
+- Linux-based operating system (recommended)
+- Python 3.9 or higher
+- Git
 - Installation on Windows may be possible, but it has not been tested
 ---
 
@@ -24,8 +24,8 @@
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/TemporalDepth/Timenetix 
-   cd Timenetix 
+   git clone https://github.com/TemporalDepth/Timenetix
+   cd Timenetix
    ```
 
 2. **Create and activate a virtual environment:**
@@ -35,18 +35,39 @@
    source venv/bin/activate
    ```
 
-3. **Install dependencies (for CPU-only by default):**
+3. ## ⚙️ Installation and System Requirements
 
-   ```bash
-   pip install -r requirements.txt
-   ```
+🧠 All required libraries, including [Darts](https://github.com/unit8co/darts) and its dependencies, will be installed automatically on first run.
 
-   > 🧠 The required libraries (including Darts and its dependencies) will be installed automatically.  
-   > If you plan to use models based on PyTorch (e.g., RNNs, N-BEATS, TFT) **with GPU acceleration**, make sure:
-   >
-   > - You have an NVIDIA GPU with proper drivers  
-   > - CUDA 12.6 is installed  
 ---
+
+### ⚡ Using with GPU (Recommended)
+
+If you plan to use PyTorch-based models (such as `RNN`, `N-BEATS`, `TFT`) and have an NVIDIA GPU:
+
+1. Install the latest drivers for your NVIDIA GPU
+2. Install CUDA:
+   - **Recommended version:** 12.6
+   - **Supported (but not recommended):** 12.8
+3. Install PyTorch with CUDA support
+   👉 Installation guide: [https://pytorch.org/get-started/locally/](https://pytorch.org/get-started/locally/)
+
+---
+
+### 🖥 Using without GPU (CPU Only)
+
+If you don’t have a dedicated GPU:
+
+- Install PyTorch with **CPU-only support**
+- All models will still work, but training and forecasting may be significantly slower
+
+---
+
+💡 Example command to install PyTorch with CPU support:
+
+```bash
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
+
 
 ## 🧪 Quick Start
 
