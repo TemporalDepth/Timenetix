@@ -1,6 +1,6 @@
-# ⏳ TimeLock: 
+# ⏳ Timenetix: 
 
-**TimeLock** is a user-friendly tool for time series forecasting built on top of the [Darts](https://github.com/unit8co/darts) library. 
+**Timenetix** is a user-friendly tool for time series forecasting built on top of the [Darts](https://github.com/unit8co/darts) library. 
 
 ---
 
@@ -24,8 +24,8 @@
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/TemporalDepth/TimeLock
-   cd TimeLock
+   git clone https://github.com/TemporalDepth/Timenetix 
+   cd Timenetix 
    ```
 
 2. **Create and activate a virtual environment:**
