@@ -80,17 +80,11 @@ component_dict = {
             "type": "Number", "label": "seasonality_period", "param_name": "seasonality_period"
         },
     ],
-    "Prophet": [
-        {
-            "type": "Textbox",
-            "label": "seasonality_mode",
-            "value": "'name':'quarterly_seasonality','seasonal_periods':4,'fourier_order':5",
 
-        }
 
 #---------Regression Models--------
 
-    ],
+
     "RegressionModel": [
         {
             "type": "Dropdown",

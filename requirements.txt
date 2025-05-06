@@ -2,4 +2,5 @@ gradio
 pandas
 plotly
 u8darts[notorch]
+pip install lightning
 openpyxl
