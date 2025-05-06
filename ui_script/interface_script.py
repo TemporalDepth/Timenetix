@@ -78,6 +78,8 @@ def save_file(file_name,pandas_save_method,file):
     else:
         file_extension = pandas_save_method
 
+    os.makedirs('output', exist_ok=True)
+
     save_file = getattr(file,f'to_{pandas_save_method}')
     save_file(f'output/{file_name}.{file_extension}', index = False)
 
