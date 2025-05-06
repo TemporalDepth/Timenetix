@@ -38,7 +38,7 @@
 3. **Install dependencies (for CPU-only by default):**
 
    ```bash
-   pip install -r requirements-cpu.txt
+   pip install -r requirements.txt
    ```
 
    > 🧠 The required libraries (including Darts and its dependencies) will be installed automatically.  
