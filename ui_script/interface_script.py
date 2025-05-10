@@ -12,52 +12,62 @@ import plotly.graph_objects as go
 
 def load_csv(file):
     df = pd.read_csv(file)
-    return df
+    visible = df.shape[1] > 2
+    
+    return (
+        df,
+        gr.update(visible=visible, value=None),
+        gr.update(visible=visible, value=None),
+        gr.update(visible=visible, value=None),
+    )
+            
+
 
 def plot_time_series(file):
     import pandas as pd
     import plotly.express as px
 
     df = pd.read_csv(file)
+    
+    if df.shape[1] == 2:
+        
+        for col in df.columns:
+            if df[col].dtype == 'object':
+                try:
+                    df[col] = pd.to_datetime(df[col], errors='coerce')
+                except Exception:
+                    pass
 
+        datetime_col = None
+        value_col = None
 
-    for col in df.columns:
-        if df[col].dtype == 'object':
-            try:
-                df[col] = pd.to_datetime(df[col], errors='coerce')
-            except Exception:
-                pass
+        for col in df.columns:
+            if datetime_col is None and pd.api.types.is_datetime64_any_dtype(df[col]):
+                datetime_col = col
+            elif value_col is None and pd.api.types.is_numeric_dtype(df[col]):
+                value_col = col
 
-    datetime_col = None
-    value_col = None
+        # Проверка, что всё найдено
+        if datetime_col is None or value_col is None:
+            raise ValueError("Failed to identify the time and numeric column.")
 
-    for col in df.columns:
-        if datetime_col is None and pd.api.types.is_datetime64_any_dtype(df[col]):
-            datetime_col = col
-        elif value_col is None and pd.api.types.is_numeric_dtype(df[col]):
-            value_col = col
-
-    # Проверка, что всё найдено
-    if datetime_col is None or value_col is None:
-        raise ValueError("Failed to identify the time and numeric column.")
-
-    fig = px.line(df, x=datetime_col, y=value_col, title='Time series')
-    fig.update_layout(
-        xaxis=dict(
-            rangeselector=dict(
-                buttons=[
-                    dict(count=7, label="7d", step="day", stepmode="backward"),
-                    dict(count=1, label="1m", step="month", stepmode="backward"),
-                    dict(count=6, label="6m", step="month", stepmode="backward"),
-                    dict(count=1, label="1y", step="year", stepmode="backward"),
-                    dict(step="all")
-                ]
-            ),
-            rangeslider=dict(visible=True),
-            type="date"
+        fig = px.line(df, x=datetime_col, y=value_col, title='Time series')
+        fig.update_layout(
+            xaxis=dict(
+                rangeselector=dict(
+                    buttons=[
+                        dict(count=7, label="7d", step="day", stepmode="backward"),
+                        dict(count=1, label="1m", step="month", stepmode="backward"),
+                        dict(count=6, label="6m", step="month", stepmode="backward"),
+                        dict(count=1, label="1y", step="year", stepmode="backward"),
+                        dict(step="all")
+                    ]
+                ),
+                rangeslider=dict(visible=True),
+                type="date"
+            )
         )
-    )
-    return fig
+        return fig
 
 
 def load_model_types():
